@@ -19,8 +19,12 @@ function getHumanChoice(){
     console.log(playerChoice);
 }
 
-function playGame(humanChoice, computerChoice) {
+function playGame() {
   // your code here!
+
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+  
     if (humanSelection==computerSelection){
         console.log("Draw");
         alert(`Draw\nComputer score= ${computerScore } Human score= ${humanScore}`);
@@ -37,13 +41,24 @@ function playGame(humanChoice, computerChoice) {
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+
 let humanScore=0;
 let computerScore=0;
 
 function playRound(){
     for(let i=0;i<5;i++){
-        playGame(humanSelection,computerSelection);
+        playGame();
+    }
+    alert(`Final Score\nComputer score= ${computerScore } Human score= ${humanScore}`);
+    if(humanScore>computerScore){
+        alert("Computer Won!")
+    }
+    else if(humanScore==computerScore){
+        alert("Draw match");
+    }
+    else{
+        alert("You won!!")
     }
 }
+
+playRound();
