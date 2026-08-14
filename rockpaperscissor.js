@@ -25,16 +25,17 @@ function playRound(humanChoice, computerChoice) {
     let computerScore=0;
     if (humanSelection==computerSelection){
         console.log("Draw");
+        alert(`Draw\nComputer score= ${computerScore } Human score= ${humanScore}`);
     }
     else if(humanSelection=="rock" && computerSelection=="paper" || humanSelection=="paper" && computerSelection=="scissor" || humanSelection=="scissor" && computerSelection=="rock"){
         console.log("Computer wins!!");
         computerScore++;
-        alert("Computer wins!!\nComputer score= ",computerScore," Human score= ",humanScore);
+        alert(`Computer win!!\nComputer score= ${computerScore } Human score= ${humanScore}`);
     }
     else{
-        onsole.log("Computer wins!!");
+        console.log("You win!!");
         humanScore++;
-        alert("You wins!!\nComputer score= ",computerScore," Human score= ",humanScore);
+        alert(`You win!!\nComputer score= ${computerScore } Human score= ${humanScore}`);
     }
 }
 
