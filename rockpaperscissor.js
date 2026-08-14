@@ -50,7 +50,7 @@ function playRound(){
         playGame();
     }
     alert(`Final Score\nComputer score= ${computerScore } Human score= ${humanScore}`);
-    if(humanScore>computerScore){
+    if(humanScore<computerScore){
         alert("Computer Won!")
     }
     else if(humanScore==computerScore){
